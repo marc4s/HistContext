@@ -267,6 +267,13 @@ class HistContext(Gramplet):
         displays an error and sets today as day, if datest is not valid
         also used for returning a date in a sortable fasion
         """
+        # Handle year-only dates (YYYY format) when __use_year is True
+        if self.__use_year and len(datest) == 4 and datest.isdigit():
+            # When using year-only mode, year strings like "1750" are already valid
+            # No need to parse them as full dates
+            self.sort_date = datest  # Use year as sort date (already sortable)
+            return datest
+        
         if len(datest) == 4 and not self.__use_year:
             if start_date:
                 datest = datest + "-01-01"
@@ -350,18 +357,23 @@ class HistContext(Gramplet):
                 else:
                     words[0] = self.normalize_date(words[0], True, True)
                     local_sort_date = self.sort_date
+                    normalized_from = words[0]  # Keep normalized version
                     if words[1]:
                         words[1] = self.normalize_date(words[1], True, False)
                     if words[1] == "0":
                         words[1] = ""
                     words[2] = words[2].replace('"', "")
-                    begin_year = str(self.normalize_date(words[0], False, True))
-                    local_sort_date = self.sort_date
-
+                    
+                    # Handle the case where to-date is empty (single-date event)
+                    # Use the already normalized value directly to avoid re-parsing
                     if words[1] == "":
-                        end_year = str(self.normalize_date(words[0], False, False))
+                        # For single-date events, use the already-normalized from-date
+                        end_year = normalized_from
                     else:
                         end_year = str(self.normalize_date(words[1], False, False))
+                    
+                    begin_year = str(self.normalize_date(normalized_from, False, True))
+                    local_sort_date = self.sort_date
                     begin_year = begin_year.replace("-", "")
                     end_year = end_year.replace("-", "")
 
