@@ -1,0 +1,103 @@
+# German translation for HistContext addon
+# Copyright (C) 2026
+# This file is distributed under the same license as the HistContext addon.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: HistContext 0.2.25\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-04\n"
+"PO-Revision-Date: 2026-11-04\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: HistContext.py:124
+msgid "Rows starting with this in the text column will be hidden "
+msgstr "Zeilen, die damit beginnen, im Textfeld werden ausgeblendet "
+
+#: HistContext.py:127
+msgid "Use filter "
+msgstr "Filter verwenden "
+
+#: HistContext.py:130
+msgid "Show outside life span "
+msgstr "Zeige außerhalb der Lebensspanne "
+
+#: HistContext.py:133
+msgid "Use full dates"
+msgstr "Volle Daten verwenden"
+
+#: HistContext.py:136
+msgid "Foreground color items in lifespan"
+msgstr "Vordergrundfarbe für Einträge in der Lebensspanne"
+
+#: HistContext.py:140
+msgid "Background color items in lifespan"
+msgstr "Hintergrundfarbe für Einträge in der Lebensspanne"
+
+#: HistContext.py:143
+msgid "Foreground color items outside lifespan"
+msgstr "Vordergrundfarbe für Einträge außerhalb der Lebensspanne"
+
+#: HistContext.py:146
+msgid "Background color items outside lifespan"
+msgstr "Hintergrundfarbe für Einträge außerhalb der Lebensspanne"
+
+#: HistContext.py:150
+msgid "Select from files"
+msgstr "Dateien auswählen"
+
+#: HistContext.py:149
+msgid "Show person events in sorted order"
+msgstr "Persönliche Ereignisse in sortierter Reihenfolge anzeigen"
+
+msgid "Person events"
+msgstr "Persönliche Ereignisse"
+
+msgid "Birth"
+msgstr "Geburt"
+
+msgid "Death"
+msgstr "Tod"
+
+#: HistContext.py:171 HistContext.py:182
+msgid "From"
+msgstr "Von"
+
+#: HistContext.py:178 HistContext.py:189
+msgid "To"
+msgstr "Bis"
+
+#: HistContext.py:185 HistContext.py:196
+msgid "Text"
+msgstr "Text"
+
+#: HistContext.py:234
+#, python-format
+msgid "Invalid date %s in line %d"
+msgstr "Ungültiges Datum %s in Zeile %d"
+
+#: HistContext.py:343
+#, python-format
+msgid ": line does not contain four or five sections separated by semicolons in : \"%s\" in File: %s"
+msgstr ": Zeile enthält nicht vier oder fünf durch Semikolons getrennte Abschnitte in: \"%s\" in Datei: %s"
+
+#: HistContext.py:434
+msgid "Double click row to follow link"
+msgstr "Doppelklick auf Zeile öffnet Link"
+
+#: HistContext.py:468
+msgid "Cannot open URL: "
+msgstr "Kann URL nicht öffnen: "
+
+#: HistContext.gpr.py:5
+msgid "Historical Context"
+msgstr "Historischer Kontext"
+
+#: HistContext.gpr.py:6
+msgid "Lists relevant historical events during the lifetime of a Person"
+msgstr "Listet relevante historische Ereignisse während des Lebens einer Person auf"
